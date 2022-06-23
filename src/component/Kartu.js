@@ -11,6 +11,23 @@ const Kartu = (props) => {
       .then((res) => setData(res.data))
       .catch((err) => alert(err.name));
   };
+  // const fetchData3 = async() => {
+  //   try{  
+  //     const response = await axios.get('https://paragon-training-api.herokuapp.com/products')
+  //   }
+  //   catch(err){
+  //     console.log(err)
+  //   }
+  // }
+  // const fetchData2 = async() => {
+  //   try{  
+  //     const response = await axios.get('https://paragon-training-api.herokuapp.com/products')
+  //     fetchData3(response.id)
+  //   }
+  //   catch(err){
+  //     console.log(err)
+  //   }
+  // }
   useEffect(() => {
     fetchData();
   }, []);
