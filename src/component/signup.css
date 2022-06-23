@@ -79,6 +79,7 @@ label {
   position: absolute;
   top: 62%;
   right: 13%;
+  cursor: pointer;
 }
 
 .button-signup {
@@ -98,6 +99,7 @@ label {
   text-decoration: none;
   vertical-align: middle;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 .anchor {
   color: #75a74d;

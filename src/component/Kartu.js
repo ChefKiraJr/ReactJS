@@ -5,7 +5,6 @@ import './kartu.css';
 const Kartu = (props) => {
   const { getCartData } = props;
   const [data, setData] = useState([]);
-  const [count, setCount] = useState(0);
   const fetchData = () => {
     axios
       .get('https://paragon-training-api.herokuapp.com/products')
@@ -44,7 +43,6 @@ const Kartu = (props) => {
               );
             })}
           </div>
-          <div className="total-kartu">{<p>Total Cart:{count}</p>}</div>
         </>
       )}
     </>

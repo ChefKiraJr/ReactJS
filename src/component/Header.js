@@ -35,23 +35,21 @@ const Header = (props) => {
           <img src="https://www.kahfeveryday.com/wp-content/uploads/2020/07/logo_kahf-1.png" alt="" />
         </div>
         <div className="header-bottom-link">
-          <a className="link" href="/">
-            Home
-          </a>
-          <Link to="/products">
-            <a className="link" href="/product">
-              Shop
-            </a>
+          <Link to="/">
+            <p className="link">Home</p>
           </Link>
-          <a className="link" href="/brand">
-            Brand
-          </a>
-          <a className="link" href="/kahf-product">
-            Kahf Program
-          </a>
-          <a className="link" href="/discovery">
-            Discovery
-          </a>
+          <Link to="/products">
+            <p className="link">Shop</p>
+          </Link>
+          <Link to="/brand">
+            <p className="link">Brand</p>
+          </Link>
+          <Link to="/kahf-product">
+            <p className="link">Kahf Program</p>
+          </Link>
+          <Link to="/discovery">
+            <p className="link">Discovery</p>
+          </Link>
         </div>
         <div className="search">
           <input class="form-control" type="text" name="" id="" placeholder="Type to search" />
