@@ -11,11 +11,12 @@ import reportWebVitals from './reportWebVitals';
 // import Login from './component/Login';
 // import Signup from './component/Signup';
 // import Header from './component//Header';
-import Home from './page/index';
+// import Home from './page/index';
 // import { BrowserRouter } from 'react-router-dom';
+import Indihome from './container/Indihome/Indihome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Home />);
+root.render(<Indihome />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
