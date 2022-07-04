@@ -12,17 +12,16 @@ class BlogPost extends Component {
     // This binding is necessary to make `this` work in the callback
     this.handleRemove = this.handleRemove.bind(this);
   }
-
-  fetchData = () => {
-    axios
-      .get('http://localhost:3004/posts')
-      .then((res) => {
-        this.setState({
-          post: res.data,
-        });
-      })
-      .catch((err) => console.log(err));
-  };
+  //   fetchData = () => {
+  //     axios
+  //       .get('http://localhost:3004/posts')
+  //       .then((res) => {
+  //         this.setState({
+  //           post: res.data,
+  //         });
+  //       })
+  //       .catch((err) => console.log(err));
+  //   };
 
   handleRemove = (data) => {
     axios

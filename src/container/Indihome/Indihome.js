@@ -1,14 +1,22 @@
 import { Component } from 'react';
-import BlogPost from '../BlogPost/BlogPost';
+import BlogPostFunc from '../BlogPost/BlogPostFunc';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import PostDetail from '../../component/PostDetail';
+// import BlogPost from '../BlogPost/BlogPost';
 
 class Indihome extends Component {
   render() {
     return (
-      <div>
-        <p>Blog Post</p>
-        <hr />
-        <BlogPost />
-      </div>
+      <BrowserRouter>
+        <div>
+          <p>Blog Post</p>
+          <hr />
+          <Routes>
+            <Route path="/" element={<BlogPostFunc />} />
+            <Route path="/detail/:anak" element={<PostDetail />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     );
   }
 }
