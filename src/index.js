@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 // import CardApp from './component/CardApp';
 // import StateFullComponent from './container/StateFullComponent';
 // import Head from './component/Head';
-// import Kartu from './component/Kartu';
 // import Tabel from './component/Tabel';
 // import Login from './component/Login';
 // import Signup from './component/Signup';
@@ -16,11 +15,14 @@ import reportWebVitals from './reportWebVitals';
 // import Indihome from './container/Indihome/Indihome';
 // import App from './context/App';
 // import Calculator from './component/calculator/Calculator';
-import Ref from './component/hook/Ref';
-import Memo from './component/hook/Memo';
+// import Ref from './component/hook/Ref';
+// import Kartu from './component/Kartu';
+// import Memo from './component/hook/Memo';
+import Home from './page';
+// import Memo from './component/hook/Memo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Ref />);
+root.render(<Home />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

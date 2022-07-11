@@ -12,8 +12,9 @@ const Ref = () => {
     prevName.current = name;
   }, [name]);
 
-  function focus() {
-    inputRef.current.focus();
+  function focus(e) {
+    console.log(e);
+    inputRef.current.click()
   }
 
   return (
@@ -23,7 +24,7 @@ const Ref = () => {
         My name is {name}, before that {prevName.current}
       </div>
       <div>I have rendered {renderCount.current} times</div>
-      <button onClick={focus}>Focus</button>
+      <button onClick={(event) => focus(event)}>Focus</button>
     </>
   );
 };

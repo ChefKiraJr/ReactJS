@@ -1,15 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import './kartu.css';
+import { Button, Skeleton, Text } from '@chakra-ui/react'
 
 const Kartu = (props) => {
   const { getCartData } = props;
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true)
   const fetchData = () => {
     axios
       .get('https://paragon-training-api.herokuapp.com/products')
-      .then((res) => setData(res.data))
-      .catch((err) => alert(err.name));
+      .then((res) => {
+        setData(res.data)
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 3000)
+      })
+      .catch((err) => {
+        // alert(err.name)
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 3000)
+      });
   };
   // const fetchData3 = async() => {
   //   try{  
@@ -37,12 +49,35 @@ const Kartu = (props) => {
       .then((res) => getCartData())
       .catch((err) => alert(err.name));
   };
+
+
+  const sort = useCallback(() => {
+    if (data.length > 0) {
+    return data.sort((a, b) => b.id - a.id)}
+  }, [data])
+  // useEffect(() => {
+  //   sort()
+  // }, [data])
+
   return (
     <>
-      {data.length > 0 && (
+      {isLoading ?
+      <div className='product'>
+      {[1, 2, 3].map(i => {
+        return (
+          <div className='kartu'>
+          <Skeleton height='290px' width='250px'></Skeleton>
+          <Skeleton height='30px' width='250px' marginTop='15px' marginBottom='20px' ></Skeleton>
+          <Skeleton height='40px' width='250px'></Skeleton>
+          </div>
+        )
+      })}
+      </div>
+       : 
+      data.length > 0 ? (
         <>
           <div className="product">
-            {data.map((value, i) => {
+            {sort().map((value, i) => {
               return (
                 <div className="kartu">
                   <div className="img-prod">
@@ -51,17 +86,18 @@ const Kartu = (props) => {
                   <div className="title">
                     <p>{value.name}</p>
                   </div>
-                  <div className="cart-button">
-                    <button onClick={() => addCart(value)} type="button">
+                  {/* <div className="cart-button"> */}
+                    <Button onClick={() => addCart(value)} colorScheme='blackAlpha' variant='solid' width='100%' >ADD TO CART</Button>
+                    {/* <button onClick={() => addCart(value)} type="button">
                       ADD TO CART
-                    </button>
-                  </div>
+                    </button> */}
+                  {/* </div> */}
                 </div>
               );
             })}
           </div>
         </>
-      )}
+      ) : <Text>404 Data Not Found</Text>}
     </>
   );
 };
