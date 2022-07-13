@@ -15,6 +15,7 @@
   width: 15%;
   padding-left: 13px;
   vertical-align: middle;
+  display: inline-block;
 }
 
 .cart-detail span {

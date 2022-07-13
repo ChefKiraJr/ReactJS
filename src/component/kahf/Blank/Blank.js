@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './blank.css';
 // import { useCount } from '../store/storeContext/ThemeContext';
 import { useSelector, useDispatch } from 'react-redux';
-import { setCount } from '../store/storeRedux/actions/countAction';
+import { setCount } from '../../../store/storeRedux/actions/countAction';
 
 const Blank = (props) => {
   const { count, text } = useSelector((state) => state.countReducer);

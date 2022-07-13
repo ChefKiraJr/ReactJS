@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './login.css';
-import './signup.css';
+import '../Signup/signup.css';
 
 const Login = () => {
   const [code, setCode] = useState(false);
