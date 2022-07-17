@@ -1,0 +1,150 @@
+.request-asset__container {
+  width: 703px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.request-asset__header {
+  display: flex;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dadada;
+}
+
+.request-asset-header__text {
+  padding-left: 10px;
+}
+
+.request-asset-header__first {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 9px;
+}
+
+.request-asset-header__last {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.request-asset__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  width: 600px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dadada;
+}
+
+.request-asset-content__row {
+  width: 50%;
+}
+
+.request-asset-content__row-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(70, 70, 70, 0.67);
+  text-align: left;
+  width: 242px;
+}
+
+.request-asset-content__row-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #464646;
+  text-align: left;
+  width: 242px;
+}
+
+.request-asset__details {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-bottom: 20px;
+}
+
+.item-details__row {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.item-details__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(70, 70, 70, 0.67);
+  text-align: left;
+  width: 242px;
+}
+
+.item-details__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #464646;
+  text-align: left;
+  width: 242px;
+  padding-top: 5px;
+}
+
+.item-details__list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #464646;
+  text-align: left;
+  width: 570px;
+}
+
+.accordion-button-text {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-button {
+  margin-bottom: 10px;
+}
+
+.accordion-button-text-main {
+  padding-left: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #464646;
+}
+
+button {
+  height: 43px;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+}
+
+.project-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+  background: #f3fbee;
+  border: 1px solid #268717;
+  border-radius: 16px;
+}
+
+.non-project-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+  background: #fff7eb;
+  border: 1px solid #ffae34;
+  border-radius: 16px;
+}

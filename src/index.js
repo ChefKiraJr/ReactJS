@@ -18,11 +18,15 @@ import reportWebVitals from './reportWebVitals';
 // import Ref from './component/hook/Ref';
 // import Kartu from './component/Kartu';
 // import Memo from './component/hook/Memo';
-import Home from './page';
+// import Home from './page';
+import DetailProduct from './component/detailProduct/DetailProduct';
+import RequestAsset from './component/requestAsset/RequestAsset';
+import UsageConfirmation from './component/usageConfirmation/UsageConfirmation';
 // import Memo from './component/hook/Memo';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Home />);
+root.render(<UsageConfirmation />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

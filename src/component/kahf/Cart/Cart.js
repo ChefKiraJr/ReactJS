@@ -2,16 +2,33 @@ import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 import './cart.css';
 import { Link } from 'react-router-dom';
-import { Skeleton } from '@chakra-ui/react';
+import { Skeleton, Modal, ModalOverlay, ModalContent, Button, ModalHeader, ModalBody, ModalCloseButton, ModalFooter, Text, useDisclosure } from '@chakra-ui/react';
+import axios from 'axios';
 
 const Cart = (props) => {
-  const { cartData } = props;
+  // const { cartData } = props;
+  const [cartData, setCartData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const { onOpen, onClose, isOpen } = useDisclosure();
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 2000);
+  // }, []);
+  const fetchData = async () => {
+    try {
+      const { data } = await axios.get('https://paragon-training-api.herokuapp.com/cart');
+      setCartData(data);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+    }
+  };
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, [cartData]);
+    fetchData();
+  }, []);
   // const [data, setData] = useState([]);
   // const fetchData = () => {
   //   axios
@@ -69,6 +86,25 @@ const Cart = (props) => {
           </div>
         </>
       )}
+      <Button onClick={onOpen}>Open Modal</Button>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text>asdadadasdasdsadasd</Text>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button variant="ghost">Secondary Action</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 };
