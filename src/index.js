@@ -24,9 +24,16 @@ import RequestAsset from './component/requestAsset/RequestAsset';
 import UsageConfirmation from './component/usageConfirmation/UsageConfirmation';
 // import Memo from './component/hook/Memo';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AssetRequest from './component/assetRequest/AssetRequest';
+import { ChakraProvider } from '@chakra-ui/react';
+import ReactTable from './component/reactTable/ReactTable';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<UsageConfirmation />);
+root.render(
+  <ChakraProvider>
+    <ReactTable />
+  </ChakraProvider>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
